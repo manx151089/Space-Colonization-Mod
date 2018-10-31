@@ -1,0 +1,4 @@
+float infrad = ch("infrad");
+int nearpnt = nearpoint(0, "nodes", @P , infrad);
+int valarr[] = array(@ptnum);
+setpointattrib(0 , "associates", nearpnt, valarr, "append");
