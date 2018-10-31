@@ -1,0 +1,28 @@
+float rad= ch("rad");
+
+@age+=1;
+
+int myassociates[] = i[]@associates;
+
+if(len(myassociates) > 0){
+    vector sum = {0,0,0};
+    
+    foreach(int node; myassociates){
+        vector nodepos = point(0,"P", node);
+        vector dir = normalize(nodepos - @P);
+        sum += dir;
+        
+        
+        }
+        sum = normalize(sum)*fit01(rand(@ptnum),1,7);
+        
+        int nnode = addpoint(0, @P+sum*rad);
+        
+        setpointgroup(0, "nodes", nnode, 1, "set") ;
+        setpointattrib(0,"Cd", nnode, {1,0,0},"set");
+        
+        int nprim = addprim(0, "polyline");
+        addvertex(0, nprim, @ptnum);
+        addvertex(0, nprim, nnode);
+
+    }
