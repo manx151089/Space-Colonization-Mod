@@ -1,0 +1,8 @@
+float killrad = ch("killrad");
+
+int nearpnts[] = nearpoints(0, "attractors", @P, killrad);
+
+foreach(int pnt; nearpnts){
+
+    removepoint(0, pnt);
+    }
